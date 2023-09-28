@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F8458F702AC565BC00E5FD2F /* AskGPT_Context_ExtensionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8458F6F2AC565BC00E5FD2F /* AskGPT_Context_ExtensionApp.swift */; };
+		F8458F722AC565BC00E5FD2F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8458F712AC565BC00E5FD2F /* ContentView.swift */; };
+		F8458F742AC565BD00E5FD2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8458F732AC565BD00E5FD2F /* Assets.xcassets */; };
+		F8458F772AC565BD00E5FD2F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8458F762AC565BD00E5FD2F /* Preview Assets.xcassets */; };
+		F8458F822AC565BD00E5FD2F /* AskGPT_Context_ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8458F812AC565BD00E5FD2F /* AskGPT_Context_ExtensionTests.swift */; };
+		F8458F8C2AC565BD00E5FD2F /* AskGPT_Context_ExtensionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8458F8B2AC565BD00E5FD2F /* AskGPT_Context_ExtensionUITests.swift */; };
+		F8458F8E2AC565BD00E5FD2F /* AskGPT_Context_ExtensionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8458F8D2AC565BD00E5FD2F /* AskGPT_Context_ExtensionUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F8458F7E2AC565BD00E5FD2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8458F642AC565BC00E5FD2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8458F6B2AC565BC00E5FD2F;
+			remoteInfo = "AskGPT Context Extension";
+		};
+		F8458F882AC565BD00E5FD2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8458F642AC565BC00E5FD2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8458F6B2AC565BC00E5FD2F;
+			remoteInfo = "AskGPT Context Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F8458F6C2AC565BC00E5FD2F /* AskGPT Context Extension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AskGPT Context Extension.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8458F6F2AC565BC00E5FD2F /* AskGPT_Context_ExtensionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskGPT_Context_ExtensionApp.swift; sourceTree = "<group>"; };
+		F8458F712AC565BC00E5FD2F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F8458F732AC565BD00E5FD2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F8458F762AC565BD00E5FD2F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F8458F782AC565BD00E5FD2F /* AskGPT_Context_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AskGPT_Context_Extension.entitlements; sourceTree = "<group>"; };
+		F8458F7D2AC565BD00E5FD2F /* AskGPT Context ExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AskGPT Context ExtensionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8458F812AC565BD00E5FD2F /* AskGPT_Context_ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskGPT_Context_ExtensionTests.swift; sourceTree = "<group>"; };
+		F8458F872AC565BD00E5FD2F /* AskGPT Context ExtensionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AskGPT Context ExtensionUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8458F8B2AC565BD00E5FD2F /* AskGPT_Context_ExtensionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskGPT_Context_ExtensionUITests.swift; sourceTree = "<group>"; };
+		F8458F8D2AC565BD00E5FD2F /* AskGPT_Context_ExtensionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskGPT_Context_ExtensionUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F8458F692AC565BC00E5FD2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8458F7A2AC565BD00E5FD2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8458F842AC565BD00E5FD2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F8458F632AC565BC00E5FD2F = {
+			isa = PBXGroup;
+			children = (
+				F8458F6E2AC565BC00E5FD2F /* AskGPT Context Extension */,
+				F8458F802AC565BD00E5FD2F /* AskGPT Context ExtensionTests */,
+				F8458F8A2AC565BD00E5FD2F /* AskGPT Context ExtensionUITests */,
+				F8458F6D2AC565BC00E5FD2F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F8458F6D2AC565BC00E5FD2F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8458F6C2AC565BC00E5FD2F /* AskGPT Context Extension.app */,
+				F8458F7D2AC565BD00E5FD2F /* AskGPT Context ExtensionTests.xctest */,
+				F8458F872AC565BD00E5FD2F /* AskGPT Context ExtensionUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8458F6E2AC565BC00E5FD2F /* AskGPT Context Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F8458F6F2AC565BC00E5FD2F /* AskGPT_Context_ExtensionApp.swift */,
+				F8458F712AC565BC00E5FD2F /* ContentView.swift */,
+				F8458F732AC565BD00E5FD2F /* Assets.xcassets */,
+				F8458F782AC565BD00E5FD2F /* AskGPT_Context_Extension.entitlements */,
+				F8458F752AC565BD00E5FD2F /* Preview Content */,
+			);
+			path = "AskGPT Context Extension";
+			sourceTree = "<group>";
+		};
+		F8458F752AC565BD00E5FD2F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F8458F762AC565BD00E5FD2F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F8458F802AC565BD00E5FD2F /* AskGPT Context ExtensionTests */ = {
+			isa = PBXGroup;
+			children = (
+				F8458F812AC565BD00E5FD2F /* AskGPT_Context_ExtensionTests.swift */,
+			);
+			path = "AskGPT Context ExtensionTests";
+			sourceTree = "<group>";
+		};
+		F8458F8A2AC565BD00E5FD2F /* AskGPT Context ExtensionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F8458F8B2AC565BD00E5FD2F /* AskGPT_Context_ExtensionUITests.swift */,
+				F8458F8D2AC565BD00E5FD2F /* AskGPT_Context_ExtensionUITestsLaunchTests.swift */,
+			);
+			path = "AskGPT Context ExtensionUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F8458F6B2AC565BC00E5FD2F /* AskGPT Context Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8458F912AC565BD00E5FD2F /* Build configuration list for PBXNativeTarget "AskGPT Context Extension" */;
+			buildPhases = (
+				F8458F682AC565BC00E5FD2F /* Sources */,
+				F8458F692AC565BC00E5FD2F /* Frameworks */,
+				F8458F6A2AC565BC00E5FD2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AskGPT Context Extension";
+			productName = "AskGPT Context Extension";
+			productReference = F8458F6C2AC565BC00E5FD2F /* AskGPT Context Extension.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F8458F7C2AC565BD00E5FD2F /* AskGPT Context ExtensionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8458F942AC565BD00E5FD2F /* Build configuration list for PBXNativeTarget "AskGPT Context ExtensionTests" */;
+			buildPhases = (
+				F8458F792AC565BD00E5FD2F /* Sources */,
+				F8458F7A2AC565BD00E5FD2F /* Frameworks */,
+				F8458F7B2AC565BD00E5FD2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8458F7F2AC565BD00E5FD2F /* PBXTargetDependency */,
+			);
+			name = "AskGPT Context ExtensionTests";
+			productName = "AskGPT Context ExtensionTests";
+			productReference = F8458F7D2AC565BD00E5FD2F /* AskGPT Context ExtensionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F8458F862AC565BD00E5FD2F /* AskGPT Context ExtensionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8458F972AC565BD00E5FD2F /* Build configuration list for PBXNativeTarget "AskGPT Context ExtensionUITests" */;
+			buildPhases = (
+				F8458F832AC565BD00E5FD2F /* Sources */,
+				F8458F842AC565BD00E5FD2F /* Frameworks */,
+				F8458F852AC565BD00E5FD2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8458F892AC565BD00E5FD2F /* PBXTargetDependency */,
+			);
+			name = "AskGPT Context ExtensionUITests";
+			productName = "AskGPT Context ExtensionUITests";
+			productReference = F8458F872AC565BD00E5FD2F /* AskGPT Context ExtensionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F8458F642AC565BC00E5FD2F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					F8458F6B2AC565BC00E5FD2F = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					F8458F7C2AC565BD00E5FD2F = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = F8458F6B2AC565BC00E5FD2F;
+					};
+					F8458F862AC565BD00E5FD2F = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = F8458F6B2AC565BC00E5FD2F;
+					};
+				};
+			};
+			buildConfigurationList = F8458F672AC565BC00E5FD2F /* Build configuration list for PBXProject "AskGPT Context Extension" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F8458F632AC565BC00E5FD2F;
+			productRefGroup = F8458F6D2AC565BC00E5FD2F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F8458F6B2AC565BC00E5FD2F /* AskGPT Context Extension */,
+				F8458F7C2AC565BD00E5FD2F /* AskGPT Context ExtensionTests */,
+				F8458F862AC565BD00E5FD2F /* AskGPT Context ExtensionUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F8458F6A2AC565BC00E5FD2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8458F772AC565BD00E5FD2F /* Preview Assets.xcassets in Resources */,
+				F8458F742AC565BD00E5FD2F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8458F7B2AC565BD00E5FD2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8458F852AC565BD00E5FD2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F8458F682AC565BC00E5FD2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8458F722AC565BC00E5FD2F /* ContentView.swift in Sources */,
+				F8458F702AC565BC00E5FD2F /* AskGPT_Context_ExtensionApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8458F792AC565BD00E5FD2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8458F822AC565BD00E5FD2F /* AskGPT_Context_ExtensionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8458F832AC565BD00E5FD2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8458F8E2AC565BD00E5FD2F /* AskGPT_Context_ExtensionUITestsLaunchTests.swift in Sources */,
+				F8458F8C2AC565BD00E5FD2F /* AskGPT_Context_ExtensionUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F8458F7F2AC565BD00E5FD2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8458F6B2AC565BC00E5FD2F /* AskGPT Context Extension */;
+			targetProxy = F8458F7E2AC565BD00E5FD2F /* PBXContainerItemProxy */;
+		};
+		F8458F892AC565BD00E5FD2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8458F6B2AC565BC00E5FD2F /* AskGPT Context Extension */;
+			targetProxy = F8458F882AC565BD00E5FD2F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F8458F8F2AC565BD00E5FD2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F8458F902AC565BD00E5FD2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		F8458F922AC565BD00E5FD2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "AskGPT Context Extension/AskGPT_Context_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AskGPT Context Extension/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "patnir41.AskGPT-Context-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F8458F932AC565BD00E5FD2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "AskGPT Context Extension/AskGPT_Context_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AskGPT Context Extension/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "patnir41.AskGPT-Context-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F8458F952AC565BD00E5FD2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "patnir41.AskGPT-Context-ExtensionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AskGPT Context Extension.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AskGPT Context Extension";
+			};
+			name = Debug;
+		};
+		F8458F962AC565BD00E5FD2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "patnir41.AskGPT-Context-ExtensionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AskGPT Context Extension.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AskGPT Context Extension";
+			};
+			name = Release;
+		};
+		F8458F982AC565BD00E5FD2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "patnir41.AskGPT-Context-ExtensionUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "AskGPT Context Extension";
+			};
+			name = Debug;
+		};
+		F8458F992AC565BD00E5FD2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "patnir41.AskGPT-Context-ExtensionUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "AskGPT Context Extension";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F8458F672AC565BC00E5FD2F /* Build configuration list for PBXProject "AskGPT Context Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8458F8F2AC565BD00E5FD2F /* Debug */,
+				F8458F902AC565BD00E5FD2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8458F912AC565BD00E5FD2F /* Build configuration list for PBXNativeTarget "AskGPT Context Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8458F922AC565BD00E5FD2F /* Debug */,
+				F8458F932AC565BD00E5FD2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8458F942AC565BD00E5FD2F /* Build configuration list for PBXNativeTarget "AskGPT Context ExtensionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8458F952AC565BD00E5FD2F /* Debug */,
+				F8458F962AC565BD00E5FD2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8458F972AC565BD00E5FD2F /* Build configuration list for PBXNativeTarget "AskGPT Context ExtensionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8458F982AC565BD00E5FD2F /* Debug */,
+				F8458F992AC565BD00E5FD2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F8458F642AC565BC00E5FD2F /* Project object */;
+}

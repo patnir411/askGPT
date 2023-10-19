@@ -1,1 +1,16 @@
+# Xcode
 *.xcworkspace
+*.xcbkptlist
+*.entitlements
+
+# basic
+backend/node_modules
+backend/myenv
+
+
+
+
+
+
+
+

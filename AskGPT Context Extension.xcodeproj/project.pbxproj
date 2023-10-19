@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F8458F702AC565BC00E5FD2F /* AskGPT_Context_ExtensionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8458F6F2AC565BC00E5FD2F /* AskGPT_Context_ExtensionApp.swift */; };
 		F8458F722AC565BC00E5FD2F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8458F712AC565BC00E5FD2F /* ContentView.swift */; };
 		F8458F742AC565BD00E5FD2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8458F732AC565BD00E5FD2F /* Assets.xcassets */; };
 		F8458F772AC565BD00E5FD2F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8458F762AC565BD00E5FD2F /* Preview Assets.xcassets */; };
-		F8458F822AC565BD00E5FD2F /* AskGPT_Context_ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8458F812AC565BD00E5FD2F /* AskGPT_Context_ExtensionTests.swift */; };
-		F8458F8C2AC565BD00E5FD2F /* AskGPT_Context_ExtensionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8458F8B2AC565BD00E5FD2F /* AskGPT_Context_ExtensionUITests.swift */; };
-		F8458F8E2AC565BD00E5FD2F /* AskGPT_Context_ExtensionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8458F8D2AC565BD00E5FD2F /* AskGPT_Context_ExtensionUITestsLaunchTests.swift */; };
+		F87DCAE02AD0D84100AE0EC7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87DCADF2AD0D84100AE0EC7 /* main.swift */; };
+		F87DCAE22AD0D85900AE0EC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87DCAE12AD0D85900AE0EC7 /* AppDelegate.swift */; };
+		F8965CF12ACBFAD700953C53 /* OverlayWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8965CF02ACBFAD700953C53 /* OverlayWindowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,16 +34,15 @@
 
 /* Begin PBXFileReference section */
 		F8458F6C2AC565BC00E5FD2F /* AskGPT Context Extension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AskGPT Context Extension.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8458F6F2AC565BC00E5FD2F /* AskGPT_Context_ExtensionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskGPT_Context_ExtensionApp.swift; sourceTree = "<group>"; };
 		F8458F712AC565BC00E5FD2F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F8458F732AC565BD00E5FD2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8458F762AC565BD00E5FD2F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F8458F782AC565BD00E5FD2F /* AskGPT_Context_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AskGPT_Context_Extension.entitlements; sourceTree = "<group>"; };
 		F8458F7D2AC565BD00E5FD2F /* AskGPT Context ExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AskGPT Context ExtensionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8458F812AC565BD00E5FD2F /* AskGPT_Context_ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskGPT_Context_ExtensionTests.swift; sourceTree = "<group>"; };
 		F8458F872AC565BD00E5FD2F /* AskGPT Context ExtensionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AskGPT Context ExtensionUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8458F8B2AC565BD00E5FD2F /* AskGPT_Context_ExtensionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskGPT_Context_ExtensionUITests.swift; sourceTree = "<group>"; };
-		F8458F8D2AC565BD00E5FD2F /* AskGPT_Context_ExtensionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskGPT_Context_ExtensionUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F87DCADF2AD0D84100AE0EC7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		F87DCAE12AD0D85900AE0EC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F8965CF02ACBFAD700953C53 /* OverlayWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayWindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				F8458F6E2AC565BC00E5FD2F /* AskGPT Context Extension */,
-				F8458F802AC565BD00E5FD2F /* AskGPT Context ExtensionTests */,
-				F8458F8A2AC565BD00E5FD2F /* AskGPT Context ExtensionUITests */,
 				F8458F6D2AC565BC00E5FD2F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,11 +91,13 @@
 		F8458F6E2AC565BC00E5FD2F /* AskGPT Context Extension */ = {
 			isa = PBXGroup;
 			children = (
-				F8458F6F2AC565BC00E5FD2F /* AskGPT_Context_ExtensionApp.swift */,
+				F8965CF02ACBFAD700953C53 /* OverlayWindowController.swift */,
 				F8458F712AC565BC00E5FD2F /* ContentView.swift */,
 				F8458F732AC565BD00E5FD2F /* Assets.xcassets */,
 				F8458F782AC565BD00E5FD2F /* AskGPT_Context_Extension.entitlements */,
 				F8458F752AC565BD00E5FD2F /* Preview Content */,
+				F87DCADF2AD0D84100AE0EC7 /* main.swift */,
+				F87DCAE12AD0D85900AE0EC7 /* AppDelegate.swift */,
 			);
 			path = "AskGPT Context Extension";
 			sourceTree = "<group>";
@@ -110,23 +108,6 @@
 				F8458F762AC565BD00E5FD2F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		F8458F802AC565BD00E5FD2F /* AskGPT Context ExtensionTests */ = {
-			isa = PBXGroup;
-			children = (
-				F8458F812AC565BD00E5FD2F /* AskGPT_Context_ExtensionTests.swift */,
-			);
-			path = "AskGPT Context ExtensionTests";
-			sourceTree = "<group>";
-		};
-		F8458F8A2AC565BD00E5FD2F /* AskGPT Context ExtensionUITests */ = {
-			isa = PBXGroup;
-			children = (
-				F8458F8B2AC565BD00E5FD2F /* AskGPT_Context_ExtensionUITests.swift */,
-				F8458F8D2AC565BD00E5FD2F /* AskGPT_Context_ExtensionUITestsLaunchTests.swift */,
-			);
-			path = "AskGPT Context ExtensionUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +241,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8458F722AC565BC00E5FD2F /* ContentView.swift in Sources */,
-				F8458F702AC565BC00E5FD2F /* AskGPT_Context_ExtensionApp.swift in Sources */,
+				F87DCAE02AD0D84100AE0EC7 /* main.swift in Sources */,
+				F87DCAE22AD0D85900AE0EC7 /* AppDelegate.swift in Sources */,
+				F8965CF12ACBFAD700953C53 /* OverlayWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +251,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8458F822AC565BD00E5FD2F /* AskGPT_Context_ExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +258,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8458F8E2AC565BD00E5FD2F /* AskGPT_Context_ExtensionUITestsLaunchTests.swift in Sources */,
-				F8458F8C2AC565BD00E5FD2F /* AskGPT_Context_ExtensionUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

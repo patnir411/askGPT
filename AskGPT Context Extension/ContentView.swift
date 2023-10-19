@@ -6,42 +6,76 @@
 //
 import SwiftUI
 import Foundation
+import UIKit
+
+struct FocusedTextField: UIViewRepresentable {
+    @Binding var text: String
+    let placeholder: String
+    
+    func makeUIView(context: Context) -> UITextField {
+        let textField = UITextField()
+        textField.delegate = context.coordinator
+        return textField
+    }
+
+    func updateUIView(_ uiView: UITextField, context: Context) {
+        uiView.text = text
+        uiView.placeholder = placeholder
+    }
+
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
+    }
+    
+    class Coordinator: NSObject, UITextFieldDelegate {
+        var parent: FocusedTextField
+        
+        init(_ parent: FocusedTextField) {
+            self.parent = parent
+        }
+        
+        func textFieldDidChangeSelection(_ textField: UITextField) {
+            parent.text = textField.text ?? ""
+        }
+    }
+}
 
 
 struct ChatView: View {
     @State private var userInput: String = ""
-    @State private var messages: [String] = ["Hi! Ask away."]
+    @State private var messages: [String] = ["What's on your mind sir?"]
     
     var body: some View {
-        GeometryReader { geometry in
-            VStack {
-                Spacer()
-                ScrollView {
-                    VStack {
-                        ForEach(messages, id: \.self) { message in
-                            Text(message)
-                                .font(.title) // Makes the text larger
-                                .fontWeight(.bold) // Makes the text bold
+            GeometryReader { geometry in
+                VStack {
+                    Spacer()
+                    ScrollView {
+                        VStack(spacing: 20) {
+                            ForEach(messages, id: \.self) { message in
+                                Text(message)
+                                    .font(.title)
+                                    .fontWeight(.bold)
+                                    .padding()
+                            }
                         }
+                        .frame(maxWidth: geometry.size.width * 0.8)
+                        .frame(maxWidth: .infinity, alignment: .center)
                     }
-                    .frame(maxWidth: .infinity)
-                }
-                .frame(height: geometry.size.height * 0.3) // 60% of the total height
-                Spacer()
-                HStack {
-                    TextField("Type your message...", text: $userInput, onCommit: {
+                    .frame(height: geometry.size.height * 0.3)
+                    Spacer()
+                    
+                    TextField("awaiting response, the world is in your palm...", text: $userInput, onCommit: {
                         sendMessage()
-                        })
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .frame(width: 600)
-                    Button("Send") {
-                        sendMessage()
-                    }
+                    })
+                    .foregroundColor(.white) // Placeholder and input text color
+                    .padding(10) // Padding around the text
+                    .textFieldStyle(PlainTextFieldStyle()) // Remove default appearance
+                    .frame(width: geometry.size.width * 0.8) // 80% of screen width
+                    .frame(maxWidth: .infinity, alignment: .center) // Center the TextField
+                    .padding(.bottom, 300)
                 }
-                .padding(.bottom, 300)
             }
         }
-    }
     
     func sendMessage() {
         // Append the user message to the messages array

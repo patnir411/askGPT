@@ -13,7 +13,7 @@ struct ChatView: View {
     @FocusState private var isInputFocused: Bool
     
     init() {
-        self.isInputFocused = true
+        isInputFocused = true
     }
     
     var body: some View {
@@ -64,14 +64,16 @@ struct ChatView: View {
     func sendMessage() {
         // Append the user message to the messages array
         messages.append(userInput)
+        print("isInputFocused = ", isInputFocused)
         
         // TODO: Send the message to the backend and get the response
 //        queryBackend(userInput: userInput) { response in
 //            messages.append(response)
 //        }
-//        self.isInputFocused = false
+        isInputFocused = false
         userInput = ""
-        self.isInputFocused = true
+        print("UPDATE USERINPUT")
+        isInputFocused = true
 
     }
     
@@ -104,6 +106,6 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    ContentView()
-}
+//#Preview {
+//    ContentView()
+//}

@@ -91,13 +91,13 @@
 		F8458F6E2AC565BC00E5FD2F /* AskGPT Context Extension */ = {
 			isa = PBXGroup;
 			children = (
+				F87DCADF2AD0D84100AE0EC7 /* main.swift */,
+				F87DCAE12AD0D85900AE0EC7 /* AppDelegate.swift */,
 				F8965CF02ACBFAD700953C53 /* OverlayWindowController.swift */,
 				F8458F712AC565BC00E5FD2F /* ContentView.swift */,
 				F8458F732AC565BD00E5FD2F /* Assets.xcassets */,
 				F8458F782AC565BD00E5FD2F /* AskGPT_Context_Extension.entitlements */,
 				F8458F752AC565BD00E5FD2F /* Preview Content */,
-				F87DCADF2AD0D84100AE0EC7 /* main.swift */,
-				F87DCAE12AD0D85900AE0EC7 /* AppDelegate.swift */,
 			);
 			path = "AskGPT Context Extension";
 			sourceTree = "<group>";

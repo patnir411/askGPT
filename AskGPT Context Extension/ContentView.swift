@@ -6,44 +6,15 @@
 //
 import SwiftUI
 import Foundation
-import UIKit
-
-struct FocusedTextField: UIViewRepresentable {
-    @Binding var text: String
-    let placeholder: String
-    
-    func makeUIView(context: Context) -> UITextField {
-        let textField = UITextField()
-        textField.delegate = context.coordinator
-        return textField
-    }
-
-    func updateUIView(_ uiView: UITextField, context: Context) {
-        uiView.text = text
-        uiView.placeholder = placeholder
-    }
-
-    func makeCoordinator() -> Coordinator {
-        Coordinator(self)
-    }
-    
-    class Coordinator: NSObject, UITextFieldDelegate {
-        var parent: FocusedTextField
-        
-        init(_ parent: FocusedTextField) {
-            self.parent = parent
-        }
-        
-        func textFieldDidChangeSelection(_ textField: UITextField) {
-            parent.text = textField.text ?? ""
-        }
-    }
-}
-
 
 struct ChatView: View {
     @State private var userInput: String = ""
     @State private var messages: [String] = ["What's on your mind sir?"]
+    @FocusState private var isInputFocused: Bool
+    
+    init() {
+        self.isInputFocused = true
+    }
     
     var body: some View {
             GeometryReader { geometry in
@@ -52,10 +23,17 @@ struct ChatView: View {
                     ScrollView {
                         VStack(spacing: 20) {
                             ForEach(messages, id: \.self) { message in
-                                Text(message)
-                                    .font(.title)
-                                    .fontWeight(.bold)
-                                    .padding()
+                                if message == "What's on your mind sir?" {
+                                    Text(message)
+                                        .font(.system(size: 36))  // Makes this specific text much larger
+                                        .fontWeight(.bold)
+                                        .padding()
+                                } else {
+                                    Text(message)
+                                        .font(.title)  // Keeps other texts at the original size
+                                        .fontWeight(.bold)
+                                        .padding()
+                                }
                             }
                         }
                         .frame(maxWidth: geometry.size.width * 0.8)
@@ -64,14 +42,20 @@ struct ChatView: View {
                     .frame(height: geometry.size.height * 0.3)
                     Spacer()
                     
-                    TextField("awaiting response, the world is in your palm...", text: $userInput, onCommit: {
+                    TextField("the world is in your palm...", text: $userInput, onCommit: {
                         sendMessage()
                     })
+                    .focused($isInputFocused)
+                    .font(.title) // Increase font size
                     .foregroundColor(.white) // Placeholder and input text color
-                    .padding(10) // Padding around the text
+                    .padding(20) // Increase padding around the text
                     .textFieldStyle(PlainTextFieldStyle()) // Remove default appearance
-                    .frame(width: geometry.size.width * 0.8) // 80% of screen width
-                    .frame(maxWidth: .infinity, alignment: .center) // Center the TextField
+                    .frame(height: 50) // Set minimum height
+                    .frame(width: geometry.size.width * 0.8, alignment: .center) // 80% of screen width, center'd
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 15)
+                            .stroke(Color.white, lineWidth: 2)
+                    )
                     .padding(.bottom, 300)
                 }
             }
@@ -82,11 +66,13 @@ struct ChatView: View {
         messages.append(userInput)
         
         // TODO: Send the message to the backend and get the response
-        queryBackend(userInput: userInput) { response in
-            messages.append(response)
-        }
-        // Clear the user input
+//        queryBackend(userInput: userInput) { response in
+//            messages.append(response)
+//        }
+//        self.isInputFocused = false
         userInput = ""
+        self.isInputFocused = true
+
     }
     
     func queryBackend(userInput: String, completion: @escaping (String) -> Void) {
@@ -114,7 +100,7 @@ struct ContentView: View {
     var body: some View {
         ChatView()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.black.opacity(0.5))
+            .background(Color.black.opacity(0.8))
     }
 }
 

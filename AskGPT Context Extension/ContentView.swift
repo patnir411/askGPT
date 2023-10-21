@@ -12,10 +12,6 @@ struct ChatView: View {
     @State private var messages: [String] = ["What's on your mind sir?"]
     @FocusState private var isInputFocused: Bool
     
-    init() {
-        isInputFocused = true
-    }
-    
     var body: some View {
             GeometryReader { geometry in
                 VStack {
@@ -42,21 +38,27 @@ struct ChatView: View {
                     .frame(height: geometry.size.height * 0.3)
                     Spacer()
                     
-                    TextField("the world is in your palm...", text: $userInput, onCommit: {
-                        sendMessage()
-                    })
+                    TextField("the world is in your palm...", text: $userInput)
                     .focused($isInputFocused)
                     .font(.title) // Increase font size
                     .foregroundColor(.white) // Placeholder and input text color
                     .padding(20) // Increase padding around the text
                     .textFieldStyle(PlainTextFieldStyle()) // Remove default appearance
-                    .frame(height: 50) // Set minimum height
-                    .frame(width: geometry.size.width * 0.8, alignment: .center) // 80% of screen width, center'd
+                    .frame(width: geometry.size.width * 0.8, height: 50, alignment: .center) // Set minimum height
                     .overlay(
                         RoundedRectangle(cornerRadius: 15)
                             .stroke(Color.white, lineWidth: 2)
                     )
                     .padding(.bottom, 300)
+                    .onSubmit {
+                        sendMessage()
+                    }
+                    
+                }
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        isInputFocused = true
+                    }
                 }
             }
         }
@@ -70,10 +72,7 @@ struct ChatView: View {
 //        queryBackend(userInput: userInput) { response in
 //            messages.append(response)
 //        }
-        isInputFocused = false
         userInput = ""
-        print("UPDATE USERINPUT")
-        isInputFocused = true
 
     }
     

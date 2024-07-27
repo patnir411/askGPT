@@ -6,29 +6,56 @@
 //
 
 import SwiftUI
+import Combine
 
-struct Message: Identifiable {
-    let id = UUID()
-    let content: String
-    let isUser: Bool
+struct ContentView: View {
+    var body: some View {
+        ChatView()
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(VisualEffectView())
+    }
 }
 
 @MainActor
 class ChatViewModel: ObservableObject {
     @Published var userInput: String = ""
-    @Published var messages: [Message] = [Message(content: "What's on your mind, sir?", isUser: false)]
+    @Published var messages: [Message] = []
+    private let ollamaService = OllamaService()
+    private var cancellables: Set<AnyCancellable> = []
+    
+    init() {
+        ollamaService.$messages
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] newMessages in
+                self?.messages = newMessages
+            }
+            .store(in: &cancellables)
+    }
     
     func sendMessage() {
         guard !userInput.isEmpty else { return }
-        let userMessage = Message(content: userInput, isUser: true)
-        messages.append(userMessage)
-        userInput = ""
         
-        // Simulate response (Replace with actual backend call)
-        let responseMessage = Message(content: "Response from backend", isUser: false)
-        messages.append(responseMessage)
+        Task {
+            let input = userInput
+            userInput = ""
+            await ollamaService.sendMessage(input)
+        }
+        
     }
 }
+
+struct VisualEffectView: NSViewRepresentable {
+    func makeNSView(context: Context) -> NSVisualEffectView {
+        let view = NSVisualEffectView()
+        view.blendingMode = .behindWindow
+        view.state = .active
+        view.material = .hudWindow
+        return view
+    }
+
+    func updateNSView(_ nsView: NSVisualEffectView, context: Context) {}
+}
+
 
 struct ChatView: View {
     @StateObject private var viewModel = ChatViewModel()
@@ -36,7 +63,7 @@ struct ChatView: View {
     
     var body: some View {
         VStack(spacing: 20) {
-            Text("What's on your mind, sir?")
+            Text("What's on your mind?")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(.white)
@@ -44,7 +71,7 @@ struct ChatView: View {
             ScrollViewReader { proxy in
                 ScrollView {
                     LazyVStack(spacing: 15) {
-                        ForEach(viewModel.messages.dropFirst()) { message in
+                        ForEach(viewModel.messages) { message in
                             MessageView(message: message)
                         }
                     }
@@ -71,17 +98,18 @@ struct ChatView: View {
                 
                 Button(action: viewModel.sendMessage) {
                     Image(systemName: "paperplane.fill")
-                        .foregroundColor(.white)
                         .padding(12)
                         .background(Color.blue)
                         .clipShape(Circle())
-                }
+                }.buttonStyle(PlainButtonStyle())
             }
             .padding()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .onAppear {
-            isInputFocused = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.isInputFocused = true
+            }
         }
     }
 }
@@ -92,18 +120,10 @@ struct MessageView: View {
     var body: some View {
         Text(message.content)
             .padding()
-            .background(message.isUser ? Color.blue.opacity(0.6) : Color.gray.opacity(0.3))
+            .background(message.role == .user ? Color.blue.opacity(0.6) : Color.gray.opacity(0.3))
             .cornerRadius(10)
             .foregroundColor(.white)
-            .frame(maxWidth: .infinity, alignment: message.isUser ? .trailing : .leading)
-    }
-}
-
-struct ContentView: View {
-    var body: some View {
-        ChatView()
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(VisualEffectView())
+            .frame(maxWidth: .infinity, alignment: message.role == .user ? .trailing : .leading)
     }
 }
 

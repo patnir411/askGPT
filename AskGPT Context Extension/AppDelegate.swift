@@ -1,23 +1,26 @@
-import Cocoa
+import SwiftUI
 
 class AppDelegate: NSObject, NSApplicationDelegate {
-    var overlayWindowController: OverlayWindowController?
-    var eventMonitor: Any?
+    var localEventMonitor: Any?
 
     func applicationDidFinishLaunching(_ notification: Notification) {
-        overlayWindowController = OverlayWindowController()
-        overlayWindowController?.showWindow(nil)
-        
-        eventMonitor = NSEvent.addLocalMonitorForEvents(matching: .keyDown) { event in
-            if event.keyCode == 53 {  // 53 is the key code for the Escape key
-                NSApplication.shared.terminate(self)
+        NSApp.setActivationPolicy(.accessory)
+        NSApp.activate(ignoringOtherApps: true)
+        setupKeyboardShortcuts()
+    }
+
+    func setupKeyboardShortcuts() {
+        localEventMonitor = NSEvent.addLocalMonitorForEvents(matching: .keyDown) { event in
+            if event.keyCode == 53 { // 53 is the key code for Escape
+                NSApp.terminate(nil)
+                return nil
             }
             return event
         }
     }
-    
+
     func applicationWillTerminate(_ notification: Notification) {
-        if let monitor = eventMonitor {
+        if let monitor = localEventMonitor {
             NSEvent.removeMonitor(monitor)
         }
     }

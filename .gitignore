@@ -1,0 +1,12 @@
+# macOS system files
+.DS_Store
+
+# Xcode related files
+*.xcodeproj
+*.xcworkspace
+*.xcuserdata
+*.xctestplan
+
+# Build output
+build/
+DerivedData/
